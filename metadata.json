@@ -1,0 +1,5 @@
+{
+  "name": "PBR Texture Generator",
+  "description": "A client-side PBR texture generator optimized for D5 Render materials. Create Albedo, Normal, Roughness, Metallic, and Height maps from a single image with advanced edge/grout controls.",
+  "requestFramePermissions": []
+}

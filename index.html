@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>D5 PBR Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              d5: {
+                dark: '#1a1a1a',
+                panel: '#252525',
+                accent: '#3b82f6',
+                input: '#333333'
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body { margin: 0; padding: 0; }
+      #root { min-height: 100vh; }
+      
+      /* Custom scrollbar */
+      ::-webkit-scrollbar { width: 8px; height: 8px; }
+      ::-webkit-scrollbar-track { background: #1a1a1a; }
+      ::-webkit-scrollbar-thumb { background: #444; border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: #555; }
+      
+      .dark ::-webkit-scrollbar-track { background: #1a1a1a; }
+      html:not(.dark) ::-webkit-scrollbar-track { background: #f3f4f6; }
+      html:not(.dark) ::-webkit-scrollbar-thumb { background: #cbd5e1; }
+
+      #error-display {
+        display: none;
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: #1a1a1a;
+        color: #ff5555;
+        padding: 2rem;
+        z-index: 9999;
+        font-family: monospace;
+        white-space: pre-wrap;
+      }
+    </style>
+    
+    <!-- Error Handler Script -->
+    <script>
+      window.addEventListener('error', function(event) {
+        const el = document.getElementById('error-display');
+        if (el) {
+          el.style.display = 'block';
+          el.innerText = 'ERRO DE EXECUÇÃO:\n' + event.message + '\n\n' + (event.error ? event.error.stack : '');
+        }
+      });
+    </script>
+
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react/": "https://esm.sh/react@18.2.0/",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "react-dom/": "https://esm.sh/react-dom@18.2.0/",
+    "three": "https://esm.sh/three@0.160.0",
+    "@react-three/fiber": "https://esm.sh/@react-three/fiber@8.15.16?external=react,react-dom,three",
+    "@react-three/drei": "https://esm.sh/@react-three/drei@9.99.0?external=react,react-dom,three,@react-three/fiber",
+    "maath": "https://esm.sh/maath@0.10.7?external=three",
+    "uuid": "https://esm.sh/uuid@9.0.1",
+    "file-saver": "https://esm.sh/file-saver@2.0.5",
+    "jszip": "https://esm.sh/jszip@3.10.1"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-100 text-gray-900 dark:bg-d5-dark dark:text-gray-200 transition-colors duration-300">
+    <div id="root"></div>
+    <div id="error-display"></div>
+  </body>
+</html>
