@@ -60,24 +60,19 @@
         }
       });
     </script>
-
   <script type="importmap">
 {
   "imports": {
-    "react": "https://esm.sh/react@18.2.0",
-    "react/": "https://esm.sh/react@18.2.0/",
-    "react-dom": "https://esm.sh/react-dom@18.2.0",
-    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
-    "react-dom/": "https://esm.sh/react-dom@18.2.0/",
-    "three": "https://esm.sh/three@0.160.0",
-    "@react-three/fiber": "https://esm.sh/@react-three/fiber@8.15.16?external=react,react-dom,three",
-    "@react-three/drei": "https://esm.sh/@react-three/drei@9.99.0?external=react,react-dom,three,@react-three/fiber",
-    "maath": "https://esm.sh/maath@0.10.7?external=three",
-    "uuid": "https://esm.sh/uuid@9.0.1",
-    "file-saver": "https://esm.sh/file-saver@2.0.5",
-    "jszip": "https://esm.sh/jszip@3.10.1",
+    "vite": "https://esm.sh/vite@^7.3.1",
     "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
-    "vite": "https://esm.sh/vite@^7.3.1"
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "file-saver": "https://esm.sh/file-saver@^2.0.5",
+    "three": "https://esm.sh/three@^0.182.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@react-three/fiber": "https://esm.sh/@react-three/fiber@^9.5.0",
+    "@react-three/drei": "https://esm.sh/@react-three/drei@^10.7.7",
+    "jszip": "https://esm.sh/jszip@^3.10.1"
   }
 }
 </script>
@@ -85,5 +80,7 @@
   <body class="bg-gray-100 text-gray-900 dark:bg-d5-dark dark:text-gray-200 transition-colors duration-300">
     <div id="root"></div>
     <div id="error-display"></div>
+    <!-- Entry point for Vite build -->
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
