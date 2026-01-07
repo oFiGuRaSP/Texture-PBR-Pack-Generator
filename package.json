@@ -1,7 +1,8 @@
+
 {
   "name": "d5-pbr-generator",
   "private": true,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -14,7 +15,7 @@
     "three": "0.160.0",
     "@react-three/fiber": "^8.15.16",
     "@react-three/drei": "9.99.0",
-    "three-mesh-bvh": "^0.8.0",
+    "three-mesh-bvh": "0.8.0",
     "jszip": "^3.10.1",
     "file-saver": "^2.0.5",
     "maath": "^0.10.7",
@@ -25,6 +26,7 @@
     "@types/react-dom": "^18.2.0",
     "@types/three": "0.160.0",
     "@types/file-saver": "^2.0.5",
+    "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.24",
     "tailwindcss": "^3.3.2",
